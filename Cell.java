@@ -1,23 +1,24 @@
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import java.awt.*;
 
 public class Cell {
     //content of this cell (empty, cross, nought)
 	Player content;
 	//row and column of this cell
 	int row, col;
-	
+
+
 	/** Constructor to initialise this cell with the specified row and col */
 	public Cell(int row, int col) {
-		
-		// TODO: Initialise the variables row, col 
 
-		
-		
+		// TODO: Initialise the variables row, col
+		if (row >= 0 && col >= 0) {
+			this.row = row;
+			this.col = col;
+		}
+
 		//TODO: call the method that sets the cell content to EMPTY
-		 
+		clear();
+
 	}
 	
 
@@ -46,6 +47,7 @@ public class Cell {
 	public void clear() {
 		
 		// TODO: Set the value of content to Empty (Remember this is an enum)
+		content = Player.Empty;
 
 		
 	}
